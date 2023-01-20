@@ -13,6 +13,7 @@ class MyHomePage extends StatelessWidget {
           Expanded(
             flex: 4,
             child: Container(
+              padding: const EdgeInsets.all(5),
               margin: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 border: Border.all(
