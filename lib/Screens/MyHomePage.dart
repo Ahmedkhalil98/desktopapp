@@ -32,7 +32,7 @@ class MyHomePage extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5.r),
                           border: Border.all(
-                            width: 1,
+                            width: 2,
                             color: Colors.black,
                           ),
                         ),
