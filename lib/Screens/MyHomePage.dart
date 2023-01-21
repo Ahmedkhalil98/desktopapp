@@ -1,11 +1,8 @@
-import 'package:desktopapp/Screens/Widgets/custom_navigationbar_items.dart';
 import 'package:desktopapp/Screens/main_page_screens/display_food_screen.dart';
 import 'package:desktopapp/Screens/main_page_screens/menu_list_screen.dart';
 import 'package:desktopapp/Screens/main_page_screens/table_list.dart';
 import 'package:desktopapp/Screens/navigation_bar.dart';
 import 'package:flutter/material.dart';
-
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
