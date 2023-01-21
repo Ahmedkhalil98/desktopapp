@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MenuListScreen extends StatelessWidget {
   final String title;
   final String image;
-  
+
   const MenuListScreen({
-    super.key, required this.title, required this.image,
+    super.key,
+    required this.title,
+    required this.image,
   });
 
   @override
@@ -13,7 +16,7 @@ class MenuListScreen extends StatelessWidget {
     return Expanded(
         flex: 2,
         child: Container(
-          margin: EdgeInsets.symmetric(vertical: 5),
+          margin:const EdgeInsets.symmetric(vertical: 5),
           width: double.infinity,
           decoration: BoxDecoration(
               border: Border.all(
@@ -39,10 +42,10 @@ class MenuListScreen extends StatelessWidget {
                       children: [
                         Image.asset(
                           image,
-                          width: 60,
+                          width: 15.w,
                         ),
-                         Padding(
-                          padding: EdgeInsets.only(top: 5.0),
+                        Padding(
+                          padding:const EdgeInsets.only(top: 5.0),
                           child: Text(
                             title,
                           ),

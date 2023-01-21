@@ -57,7 +57,7 @@ class MyHomePage extends StatelessWidget {
                     ],
                   ),
                   //! => Custom Navigation Bar :
-                  CustomNavigationBar(),
+                  const CustomNavigationBar(),
                 ],
               ),
             ),
