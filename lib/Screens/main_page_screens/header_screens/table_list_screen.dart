@@ -10,8 +10,8 @@ class TableListScreen extends StatelessWidget {
     return Container(
         width: double.infinity,
         decoration: BoxDecoration(
-            border:
-                Border.all(width: 2, color: Colors.black)),
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(width: 1, color: Colors.black)),
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 20,
@@ -23,9 +23,7 @@ class TableListScreen extends StatelessWidget {
                   height: 55,
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: index % 2 == 0
-                          ? Colors.red
-                          : Colors.green,
+                      color: index % 2 == 0 ? Colors.red : Colors.green,
                       width: 2,
                     ),
                     borderRadius: BorderRadius.circular(10),
@@ -40,8 +38,7 @@ class TableListScreen extends StatelessWidget {
                         width: 35,
                       ),
                       Padding(
-                        padding:
-                            const EdgeInsets.only(top: 10),
+                        padding: const EdgeInsets.only(top: 10),
                         child: Text(
                           "${index + 1}",
                         ),

@@ -16,13 +16,14 @@ class MenuListScreen extends StatelessWidget {
     return Expanded(
         flex: 2,
         child: Container(
-          margin:const EdgeInsets.symmetric(vertical: 5),
+          margin: const EdgeInsets.symmetric(vertical: 5),
           width: double.infinity,
           decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
               border: Border.all(
-            width: 2,
-            color: Colors.black,
-          )),
+                width: 1,
+                color: Colors.black,
+              )),
           child: ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
@@ -35,7 +36,7 @@ class MenuListScreen extends StatelessWidget {
                     width: 100,
                     decoration: BoxDecoration(
                         border: Border.all(width: 2, color: Colors.black),
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(10),
                         color: Colors.blue[100]),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -45,7 +46,7 @@ class MenuListScreen extends StatelessWidget {
                           width: 15.w,
                         ),
                         Padding(
-                          padding:const EdgeInsets.only(top: 5.0),
+                          padding: const EdgeInsets.only(top: 5.0),
                           child: Text(
                             title,
                           ),

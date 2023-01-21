@@ -19,10 +19,11 @@ class FoodDisplayScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           width: double.infinity,
           decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
               border: Border.all(
-            width: 2,
-            color: Colors.black,
-          )),
+                width: 1,
+                color: Colors.black,
+              )),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: GridView.builder(
