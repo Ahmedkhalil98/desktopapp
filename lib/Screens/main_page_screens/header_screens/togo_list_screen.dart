@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class DeleveryListScreen extends StatelessWidget {
-  const DeleveryListScreen({super.key});
+class TogoListScreen extends StatelessWidget {
+  const TogoListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class DeleveryListScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     Image.asset(
-                      "assets/delevery_orange.png",
+                      "assets/to_go_orange.png",
                       width: 10.w,
                     ),
                     SizedBox(

@@ -10,8 +10,8 @@ class TabsButtonWidgets extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         tabButtonStyle(title: "Table", imgUrl: "assets/table_black.png"),
-        tabButtonStyle(title: "Delivery", imgUrl: "assets/table_black.png"),
-        tabButtonStyle(title: "To-Go", imgUrl: "assets/table_black.png"),
+        tabButtonStyle(title: "Delivery", imgUrl: "assets/delivery.png"),
+        tabButtonStyle(title: "To-Go", imgUrl: "assets/to_go_icons.png"),
       ],
     );
   }

@@ -4,6 +4,7 @@ import 'package:desktopapp/Screens/Widgets/groub_button.dart';
 import 'package:desktopapp/Screens/Widgets/tab_widget.dart';
 import 'package:desktopapp/Screens/main_page_screens/display_food_screen.dart';
 import 'package:desktopapp/Screens/main_page_screens/header_screens/delevery_list_screen.dart';
+import 'package:desktopapp/Screens/main_page_screens/header_screens/togo_list_screen.dart';
 import 'package:desktopapp/Screens/main_page_screens/menu_list_screen.dart';
 import 'package:desktopapp/Screens/main_page_screens/header_screens/table_list_screen.dart';
 import 'package:desktopapp/Screens/navigation_bar.dart';
@@ -19,6 +20,7 @@ class MyHomePage extends StatelessWidget {
       body: Row(
         //? Home Screen Start :
         children: [
+          //! => Left Section :
           Expanded(
             flex: 4,
             child: Container(
@@ -40,10 +42,11 @@ class MyHomePage extends StatelessWidget {
                         // TODO: index stack for change screens => we can change it, if you have another idea :
                         child: IndexedStack(
                           index: 0,
-                          children: const [
+                          children: [
                             //! Display Table Screen for first index :
                             TableListScreen(),
-                            DeleveryListScreen()
+                            DeleveryListScreen(),
+                            TogoListScreen()
                           ],
                         ),
                       ),
@@ -53,7 +56,7 @@ class MyHomePage extends StatelessWidget {
                         title: 'Meals',
                       ),
                       //! => Display Foods Class :
-                      const FoodDisplayScreen(
+                      FoodDisplayScreen(
                         image: "assets/fruits_icon.png",
                         price: 10,
                         title: 'Fruits',

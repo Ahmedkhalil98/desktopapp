@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FoodDisplayScreen extends StatelessWidget {
   final String image;
@@ -28,35 +29,36 @@ class FoodDisplayScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: GridView.builder(
                 itemCount: 50,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisSpacing: 20,
-                    mainAxisSpacing: 30,
-                    crossAxisCount: 6),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisSpacing: 5.w,
+                    mainAxisSpacing: 5.h,
+                    crossAxisCount: 5),
                 itemBuilder: (context, index) {
                   return Container(
-                    width: 75,
-                    height: 75,
+                    width: 60.w,
+                    height: 60.h,
                     decoration: BoxDecoration(
                       border: Border.all(width: 2, color: Colors.black),
-                      borderRadius: BorderRadius.circular(20),
-                      color: Color(0xff008b8b),
+                      borderRadius: BorderRadius.circular(20.r),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(
                           image,
-                          width: 60,
+                          height: 20.w,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(
                               title,
+                              style: TextStyle(fontSize: 4.sp),
                             ),
-                            Text(
-                              "$price\$",
-                            ),
+                            Text("$price\$",
+                                style: TextStyle(
+                                  fontSize: 4.sp,
+                                )),
                           ],
                         )
                       ],
