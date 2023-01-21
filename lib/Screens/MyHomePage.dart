@@ -1,9 +1,14 @@
+import 'package:desktopapp/Screens/Widgets/Accounts_section.dart';
+import 'package:desktopapp/Screens/Widgets/boutton_section.dart';
+import 'package:desktopapp/Screens/Widgets/groub_button.dart';
+import 'package:desktopapp/Screens/Widgets/tab_widget.dart';
 import 'package:desktopapp/Screens/main_page_screens/display_food_screen.dart';
 import 'package:desktopapp/Screens/main_page_screens/header_screens/delevery_list_screen.dart';
 import 'package:desktopapp/Screens/main_page_screens/menu_list_screen.dart';
 import 'package:desktopapp/Screens/main_page_screens/header_screens/table_list_screen.dart';
 import 'package:desktopapp/Screens/navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -61,6 +66,8 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
+
+          //! => Right Section :
           Expanded(
             flex: 2,
             child: Container(
@@ -72,7 +79,28 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               child: Column(
-                children: const [],
+                children: [
+                  const TabsButtonWidgets(),
+                  SizedBox(
+                    height: 14.h,
+                  ),
+                  const GroupButtonsWidgets(),
+                  //! data Table :
+                  Container(
+                    height: 320.h,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 12.h,
+                  ),
+                  const AccountsSection(),
+                  SizedBox(
+                    height: 14.h,
+                  ),
+                  const ButtonSection(),
+                ],
               ),
             ),
           ),
