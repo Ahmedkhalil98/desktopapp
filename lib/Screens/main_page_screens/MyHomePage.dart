@@ -1,3 +1,4 @@
+import 'package:desktopapp/Controllers/myHomePage_Controllers.dart';
 import 'package:desktopapp/Screens/main_page_screens/header_section/delevery_list_screen.dart';
 import 'package:desktopapp/Screens/main_page_screens/header_section/table_list_screen.dart';
 import 'package:desktopapp/Screens/main_page_screens/right_Section_widgets/Accounts_section.dart';
@@ -11,9 +12,12 @@ import 'package:desktopapp/Screens/main_page_screens/menu_list.dart';
 import 'package:desktopapp/Screens/navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+  MyHomePage({super.key});
+
+  final homeController = Get.put(MyHomePageController());
 
   @override
   Widget build(BuildContext context) {
@@ -39,18 +43,21 @@ class MyHomePage extends StatelessWidget {
                     children: [
                       //! => Header =>  will be Changed later :
                       Expanded(
-                        flex: 1,
-                        // TODO: index stack for change screens => we can change it, if you have another idea :
-                        child: IndexedStack(
-                          index: 0,
-                          children: const [
-                            //! Display Table Screen for first index :
-                            TableListScreen(),
-                            DeleveryListScreen(),
-                            TogoListScreen()
-                          ],
-                        ),
-                      ),
+                          flex: 1,
+                          // TODO: index stack for change screens => we can change it, if you have another idea :
+                          child: Obx(
+                            () {
+                              return IndexedStack(
+                                index: homeController.indexOfheader.value,
+                                children: const [
+                                  //! Display Table Screen for first index :
+                                  TableListScreen(),
+                                  DeleveryListScreen(),
+                                  TogoListScreen()
+                                ],
+                              );
+                            },
+                          )),
                       //! => Food Menu List :
                       const MenuListScreen(
                         image: "assets/meals_icon.png",
@@ -84,7 +91,7 @@ class MyHomePage extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  const TabsButtonWidgets(),
+                  TabsButtonWidgets(),
                   SizedBox(
                     height: 14.h,
                   ),
