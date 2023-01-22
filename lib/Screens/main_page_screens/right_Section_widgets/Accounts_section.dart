@@ -36,7 +36,7 @@ class AccountsSection extends StatelessWidget {
         textAlign: TextAlign.center,
         "$labelText \$",
         style: TextStyle(
-          fontSize: 5.sp,
+          fontSize: 4.sp,
           fontWeight: FontWeight.bold,
         ),
       ),

@@ -1,12 +1,13 @@
-import 'package:desktopapp/Screens/Widgets/Accounts_section.dart';
-import 'package:desktopapp/Screens/Widgets/boutton_section.dart';
-import 'package:desktopapp/Screens/Widgets/groub_button.dart';
-import 'package:desktopapp/Screens/Widgets/tab_widget.dart';
-import 'package:desktopapp/Screens/main_page_screens/display_food_screen.dart';
-import 'package:desktopapp/Screens/main_page_screens/header_screens/delevery_list_screen.dart';
-import 'package:desktopapp/Screens/main_page_screens/header_screens/togo_list_screen.dart';
-import 'package:desktopapp/Screens/main_page_screens/menu_list_screen.dart';
-import 'package:desktopapp/Screens/main_page_screens/header_screens/table_list_screen.dart';
+import 'package:desktopapp/Screens/main_page_screens/header_section/delevery_list_screen.dart';
+import 'package:desktopapp/Screens/main_page_screens/header_section/table_list_screen.dart';
+import 'package:desktopapp/Screens/main_page_screens/right_Section_widgets/Accounts_section.dart';
+import 'package:desktopapp/Screens/main_page_screens/right_Section_widgets/boutton_section.dart';
+import 'package:desktopapp/Screens/main_page_screens/right_Section_widgets/groub_button.dart';
+import 'package:desktopapp/Screens/main_page_screens/right_Section_widgets/invoice_data_widget.dart';
+import 'package:desktopapp/Screens/main_page_screens/right_Section_widgets/tab_widget.dart';
+import 'package:desktopapp/Screens/main_page_screens/display_food_list.dart';
+import 'package:desktopapp/Screens/main_page_screens/header_section/togo_list_screen.dart';
+import 'package:desktopapp/Screens/main_page_screens/menu_list.dart';
 import 'package:desktopapp/Screens/navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -42,7 +43,7 @@ class MyHomePage extends StatelessWidget {
                         // TODO: index stack for change screens => we can change it, if you have another idea :
                         child: IndexedStack(
                           index: 0,
-                          children: [
+                          children: const [
                             //! Display Table Screen for first index :
                             TableListScreen(),
                             DeleveryListScreen(),
@@ -56,7 +57,7 @@ class MyHomePage extends StatelessWidget {
                         title: 'Meals',
                       ),
                       //! => Display Foods Class :
-                      FoodDisplayScreen(
+                      const FoodDisplayScreen(
                         image: "assets/fruits_icon.png",
                         price: 10,
                         title: 'Fruits',
@@ -89,15 +90,9 @@ class MyHomePage extends StatelessWidget {
                   ),
                   const GroupButtonsWidgets(),
                   //! data Table :
-                  Container(
-                    height: 320.h,
-                    decoration: BoxDecoration(
-                      border: Border.all(width: 1),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 12.h,
-                  ),
+                  InvoiceDataWidget(),
+                  const Divider(),
+
                   const AccountsSection(),
                   SizedBox(
                     height: 14.h,

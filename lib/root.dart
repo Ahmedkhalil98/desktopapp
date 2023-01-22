@@ -1,7 +1,9 @@
 import 'package:desktopapp/functions/scroll.dart';
-import 'package:desktopapp/Screens/MyHomePage.dart';
+import 'package:desktopapp/Screens/main_page_screens/MyHomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+//import 'package:get/get.dart';
+// GetMaterialApp
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
