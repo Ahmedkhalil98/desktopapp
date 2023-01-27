@@ -1,7 +1,5 @@
-import 'package:desktopapp/Screens/import_export_screens/import_export_main_page.dart';
 import 'package:desktopapp/Screens/main_screens/MyHomePage.dart';
 import 'package:desktopapp/Screens/profits_Screens/profits_page.dart';
-import 'package:desktopapp/Screens/profits_Screens/show_profits_data.dart';
 import 'package:desktopapp/functions/scroll.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,8 +18,13 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: MyHomePage(),
+          // home: MyHomePage(),
           // MyHomePage(),
+          initialRoute: '/',
+          getPages: [
+            GetPage(name: "/", page: () => MyHomePage()),
+            GetPage(name: "/profits", page: () => const ProfitsPage()),
+          ],
         );
       },
     );
