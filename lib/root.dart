@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
           ),
           initialRoute: '/',
           getPages: [
-            // add by Dilkhosh
+            // add by Ahmed
             GetPage(name: "/", page: () => MyHomePage()),
-            // new commentt
+            GetPage(name: "setting", page: () => MyHomePage()),
             GetPage(name: "/profits", page: () => const ProfitsPage()),
             GetPage(name: "/import", page: () => EmportExportScreen()),
             // end
