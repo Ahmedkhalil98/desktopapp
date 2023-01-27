@@ -18,10 +18,9 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          // home: MyHomePage(),
-          // MyHomePage(),
           initialRoute: '/',
           getPages: [
+            // add by Ahmed
             GetPage(name: "/", page: () => MyHomePage()),
             GetPage(name: "/profits", page: () => const ProfitsPage()),
           ],
