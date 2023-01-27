@@ -21,10 +21,13 @@ class MyApp extends StatelessWidget {
           ),
           initialRoute: '/',
           getPages: [
-            // add by Dlo
+            // add by Ahmed
             GetPage(name: "/", page: () => MyHomePage()),
+            GetPage(name: "settings", page: () => MyHomePage()),
+
             GetPage(name: "/profits", page: () => const ProfitsPage()),
             GetPage(name: "/import", page: () => EmportExportScreen()),
+            // end
           ],
         );
       },
