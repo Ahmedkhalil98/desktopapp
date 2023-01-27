@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           getPages: [
             // add by Dilkhosh
             GetPage(name: "/", page: () => MyHomePage()),
-            // new comment
+            // new commentt
             GetPage(name: "/profits", page: () => const ProfitsPage()),
             GetPage(name: "/import", page: () => EmportExportScreen()),
             // end
