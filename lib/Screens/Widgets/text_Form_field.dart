@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyTextFormField extends StatelessWidget {
   String? hint;
-  MyTextFormField({super.key, this.hint});
+  Icon? icon;
+  MyTextFormField({super.key, this.hint , this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,7 @@ class MyTextFormField extends StatelessWidget {
       style: Theme.of(context).textTheme.bodySmall,
       //keyboardType: typeinput,
       decoration: InputDecoration(
+        suffixIcon: icon,
         hintText: hint,
         hintStyle: Theme.of(context).textTheme.bodyMedium,
         helperStyle: const TextStyle(color: Colors.red),

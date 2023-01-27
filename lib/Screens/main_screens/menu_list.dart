@@ -35,7 +35,7 @@ class MenuListScreen extends StatelessWidget {
                   child: Container(
                     width: 100,
                     decoration: BoxDecoration(
-                      border: Border.all(width: 2, color: Colors.black),
+                      border: Border.all(width: 1, color: Colors.black),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Column(
@@ -43,7 +43,7 @@ class MenuListScreen extends StatelessWidget {
                       children: [
                         Image.asset(
                           image,
-                          width: 15.w,
+                          width: 50,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 5.0),

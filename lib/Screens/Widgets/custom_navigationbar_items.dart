@@ -22,21 +22,23 @@ class _CustomNavigationItemsState extends State<CustomNavigationItems> {
       onTap: widget.press,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 5.w),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset(
-              widget.path,
-              width: 35,
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Text(
-              widget.title,
-            )
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                widget.path,
+                height: 30.h,
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Text(
+                widget.title,
+                style: TextStyle(fontSize: 5.sp),
+              )
+            ],
+          ),
         ),
       ),
     );

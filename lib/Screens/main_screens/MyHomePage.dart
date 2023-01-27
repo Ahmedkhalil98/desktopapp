@@ -77,7 +77,6 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
-
           //! => Right Section :
           Expanded(
             flex: 2,
@@ -99,7 +98,6 @@ class MyHomePage extends StatelessWidget {
                   //! data Table :
                   InvoiceDataWidget(),
                   const Divider(),
-
                   const AccountsSection(),
                   SizedBox(
                     height: 14.h,

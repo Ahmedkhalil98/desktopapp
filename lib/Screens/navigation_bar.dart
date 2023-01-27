@@ -1,5 +1,6 @@
 import 'package:desktopapp/Screens/Widgets/custom_navigationbar_items.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomNavigationBar extends StatefulWidget {
   const CustomNavigationBar({super.key});
@@ -8,46 +9,64 @@ class CustomNavigationBar extends StatefulWidget {
   State<CustomNavigationBar> createState() => _NavigationBarState();
 }
 
-class _NavigationBarState extends State<CustomNavigationBar> {
+class _NavigationBarState extends State<CustomNavigationBar>
+    with SingleTickerProviderStateMixin {
   bool selected = false;
+  late Animation<double> animation;
+  late AnimationController controller;
+  @override
+  void initState() {
+    controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
+    )
+      ..forward()
+      ..repeat(reverse: true);
+    animation = Tween<double>(begin: 0.0, end: 1.0).animate(controller);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 5),
-            child: IconButton(
-              icon: Icon(
-                selected == false
-                    ? Icons.arrow_drop_up_outlined
-                    : Icons.arrow_drop_down,
-                size: 50,
-              ),
-              onPressed: () {
+          GestureDetector(
+              onTap: (() {
                 setState(() {
                   selected = !selected;
-                  print(selected);
                 });
-              },
-            ),
-          ),
+              }),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.greenAccent.withOpacity(.5),
+                    borderRadius: BorderRadius.circular(50)),
+                child: AnimatedIcon(
+                  size: 15.w,
+                  icon: AnimatedIcons.menu_arrow,
+                  progress: animation,
+                ),
+              )),
           AnimatedContainer(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            margin: selected == true ? const EdgeInsets.only(bottom: 5) : null,
+            padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),
+            margin: selected == true ? EdgeInsets.only(bottom: 5.h) : null,
             width: double.infinity,
-            height: selected ? 70 : 0,
+            height: selected ? 80.h : 0,
             alignment:
                 selected ? Alignment.center : AlignmentDirectional.topCenter,
             duration: const Duration(milliseconds: 500),
-            curve: Curves.easeIn,
+            curve: Curves.easeInExpo,
             decoration: BoxDecoration(
+                border: Border.all(
+                  width: 2,
+                  color: Colors.black,
+                ),
                 color:
-                    selected ? Color.fromARGB(255, 70, 196, 107) : Colors.blue,
-                borderRadius: BorderRadius.circular(10)),
+                    selected ? Colors.greenAccent.withOpacity(1) : Colors.blue,
+                borderRadius: BorderRadius.circular(10.r)),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
