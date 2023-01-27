@@ -1,3 +1,4 @@
+import 'package:desktopapp/Screens/import_export_screens/import_export_main_page.dart';
 import 'package:desktopapp/Screens/main_screens/MyHomePage.dart';
 import 'package:desktopapp/Screens/profits_Screens/profits_page.dart';
 import 'package:desktopapp/functions/scroll.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
             // add by Ahmed
             GetPage(name: "/", page: () => MyHomePage()),
             GetPage(name: "/profits", page: () => const ProfitsPage()),
+            GetPage(name: "/import", page: () => EmportExportScreen()),
           ],
         );
       },
