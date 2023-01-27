@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
             // new comment
             GetPage(name: "/profits", page: () => const ProfitsPage()),
             GetPage(name: "/import", page: () => EmportExportScreen()),
+            // end
           ],
         );
       },
