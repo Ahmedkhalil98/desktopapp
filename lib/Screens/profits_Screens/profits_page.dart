@@ -1,3 +1,5 @@
+import 'package:desktopapp/Screens/profits_Screens/widgets/search_form.dart';
+import 'package:desktopapp/Screens/profits_Screens/widgets/show_profits_data.dart';
 import 'package:flutter/material.dart';
 
 class ProfitsPage extends StatefulWidget {
@@ -17,23 +19,18 @@ class _ProfitsPageState extends State<ProfitsPage> {
           Expanded(
               flex: 4,
               child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 1,
-                      color: Colors.black,
-                    ),
-                    borderRadius: BorderRadius.circular(10)),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                child: const ShowProfitsData(),
               )),
           //! => right section for search
+
           Expanded(
               flex: 2,
               child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 1,
-                      color: Colors.black,
-                    ),
-                    borderRadius: BorderRadius.circular(10)),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                child: SearchForm(),
               )),
         ],
       ),

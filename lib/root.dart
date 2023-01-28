@@ -19,14 +19,12 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          initialRoute: '/',
+          initialRoute: '/profits',
           getPages: [
-            // add by Ahmed
             GetPage(name: "/", page: () => MyHomePage()),
-            GetPage(name: "setting", page: () => MyHomePage()),
+            GetPage(name: "/setting", page: () => MyHomePage()),
             GetPage(name: "/profits", page: () => const ProfitsPage()),
             GetPage(name: "/import", page: () => EmportExportScreen()),
-            // end
           ],
         );
       },

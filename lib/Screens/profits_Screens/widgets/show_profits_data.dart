@@ -13,6 +13,7 @@ class ShowProfitsData extends StatelessWidget {
           dataRowColor: MaterialStateProperty.all(Colors.white),
           border: TableBorder.all(
             width: 1,
+            color: Colors.grey,
           ),
           decoration: const BoxDecoration(
             border: Border(

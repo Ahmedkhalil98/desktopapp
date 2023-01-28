@@ -13,7 +13,12 @@ class TitleOfTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 12.h),
-      child: Text(title),
+      child: Text(
+        title,
+        style: TextStyle(
+          fontSize: 5.sp,
+        ),
+      ),
     );
   }
 }

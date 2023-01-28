@@ -4,14 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class MyTextFormField extends StatelessWidget {
   String? hint;
   Icon? icon;
-  MyTextFormField({super.key, this.hint , this.icon});
+  MyTextFormField({super.key, this.hint, this.icon});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       //controller: controller,
-      // maxLines: maxLine,
-      style: Theme.of(context).textTheme.bodySmall,
       //keyboardType: typeinput,
       decoration: InputDecoration(
         suffixIcon: icon,
